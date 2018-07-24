@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>voiture</title>
+  </head>
+  <body>
+    <canvas id="mon_canvas" width="400" height="400"></canvas>
+    <script>
+    /*declaration des variable*/
+    var c = document.getElementById('mon_canvas');
+    var ctx = c.getContext("2d");
+    //Tout est fait en carre et en rectangle pour l'exercice
+    // Toit de la voiture
+    ctx.beginPath();
+    ctx.moveTo(50,100);
+    ctx.lineTo(350,100);
+    ctx.lineTo(350,150);
+    ctx.lineTo(50,150);
+    ctx.closePath();
+    ctx.fillStyle = "#00A551";
+    ctx.fill();
+    // bas de la voiture
+    ctx.beginPath();
+    ctx.moveTo(00,150);
+    ctx.lineTo(400,150);
+    ctx.lineTo(400,225);
+    ctx.lineTo(00,225);
+    ctx.closePath();
+    ctx.fillStyle = "#00A551";
+    ctx.fill();
+    //roue Droite
+    ctx.beginPath();
+    ctx.arc(350,275,50,0,2*Math.PI);
+    ctx.closePath();
+    ctx.fillStyle = "#CDCDCD";
+    ctx.fill();
+    //roue gauche
+    ctx.beginPath();
+    ctx.arc(50,275,50,0,2*Math.PI);
+    ctx.closePath();
+    ctx.fillStyle = "#CDCDCD";
+    ctx.fill();
+    </script>
+  </body>
+</html>
